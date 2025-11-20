@@ -18,12 +18,12 @@ public class linearSearch02 {
         System.out.print("Enter the key you want to search for: ");
         int key = input.nextInt();
 
-        int result = -1;
+        int result = -1; // default value when key is not found
 
         for (int i = 0; i < n; i++) {
             if (array[i] == key) {
                 result = i;
-                break;
+                break; // stop searching when key is found
             }
         }
 
@@ -34,5 +34,6 @@ public class linearSearch02 {
         }
         
         input.close();
+
     }
 }
