@@ -5,21 +5,19 @@ public class arrayAverageScore02 {
         Scanner sc = new Scanner(System.in);
 
         int[] score = new int[10];
-        double total = 0;
-        double average;
+
+        int passCount = 0;  
 
         for (int i = 0; i < score.length; i++) {
             System.out.print("Enter student score " + (i + 1) + ": ");
             score[i] = sc.nextInt();
+
+            if (score[i] > 70) {
+                passCount++;  
+            }
         }
 
-        for (int i = 0; i < score.length; i++) {
-            total += score[i];
-        }
-
-        average = total / score.length;
-
-        System.out.printf("The class average score is %.1f%n", average);
+        System.out.println("Number of students who passed: " + passCount);
 
         sc.close();
     }
